@@ -238,31 +238,3 @@
 // };
 // user.greet();
 
-//Array to store users
-user = [];
-
-//function to add a user
-function addUser({ name = "Unknown", age = 0, country = "Unknown" } = {}) {
-  const newUser = { name, age, country };
-  user.push(newUser);
-  console.log(`User ${name} added successfully!`);  
-}
-//function to display all users
-function displayUsers() {
-    console.log("Users List:");
-    users.forEach((user, index) => {
-        // Destructuring with nullish coalescing 
-        const { name, age, city } = user;
-        console.log(`${index + 1}. Name: ${name}, Age: ${age}, City: ${city ?? "N/A"}`);
-    });
-}
-//function to update a user
-function updateUser(index, updatedData = {}) {
-    if (users[index]) {
-        // Spread operator to merge old and new data
-        users[index] = { ...users[index], ...updatedData };
-        console.log(`User ${users[index].name} updated successfully.`);
-    } else {
-        console.log("User not found at this index.");
-    }
-}
