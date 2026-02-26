@@ -238,3 +238,19 @@
 // };
 // user.greet();
 
+// const users = [5, 8, 12, 20];
+// const under18 = users.some(u => u < 18);
+// console.log(under18); // true
+
+
+// let users = [
+//   { name: "Ujwal", age: 19, city: "Pokhara" },
+//   { name: "Jon", age: 20, city: "Lalitpur" },
+//   { name: "Alice", age: 22, city: "Kathmandu" }
+// ];
+// // Check if any user is under 18
+// const under18 = users.some(user => user.age < 18);
+// console.log(under18); // false
+// const userCity = users.find(u => u.name === "Ujwal")?.city ?? "N/A";
+// console.log(userCity); // Pokhara or N/A
+
